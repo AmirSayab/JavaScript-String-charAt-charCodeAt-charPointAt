@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The charCodeAt() Method</h2>
+
+<p>charCodeAt() returns the Unicode of the character at a specified position in a string.</p><br>
+<p>The codePointAt() method returns the Unicode value at an index (position) in a string.</p><br>
+<p>The charAt() method returns the character at a specified index (position) in a string.</p><br>
+<p>charCodeAt() vs codePointAt()<br>
+charCodeAt() is UTF-16, codePointAt() is Unicode.<br>
+
+charCodeAt() returns a number between 0 and 65535.<br>
+
+Both methods return an integer representing the UTF-16 code of a character, but only codePointAt() can return the full value of a Unicode value greather 0xFFFF (65535).</p>
+
+
+<p id="demo"></p>
+<p id="semo"></p>
+<p id="lemo"></p>
+
+
+<script>
+let text = "HELLO WORLD";
+let CCAcode = text.charCodeAt(10);
+let CPAcode = text.codePointAt(10);
+let letter= text.charAt(10);
+
+document.getElementById("demo").innerHTML = CCAcode;
+document.getElementById("semo").innerHTML = letter;
+document.getElementById("lemo").innerHTML = CPAcode;
+
+
+</script>
+
+</body>
+</html>
